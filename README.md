@@ -4,11 +4,11 @@
 
 ## Setup
 
-Add in your *wrepl* config:
+Add in your *wrepl* config (from `rebel-readline` will be passed):
 
 ```clojure
 {:wrepl/prompt #ig/ref :wrepl.rebel-readline/prompt
  :wrepl/read #ig/ref :wrepl.rebel-readline/read
  :wrepl.rebel-readline/prompt {}
- :wrepl.rebel-readline/read {}}
+ :wrepl.rebel-readline/read {:indent false}}
 ```

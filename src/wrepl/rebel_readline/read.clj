@@ -13,4 +13,4 @@
   [_ options]
   (rebel-readline.core/clj-repl-read
    (rebel-readline.core/line-reader
-    (rebel-readline.service.impl.local-clojure-service/create))))
+    (rebel-readline.service.impl.local-clojure-service/create options))))
