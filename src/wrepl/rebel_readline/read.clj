@@ -1,7 +1,7 @@
 (ns wrepl.rebel-readline.read
   (:require [integrant.core :as ig]
             [rebel-readline.core]
-            [rebel-readline.service.impl.local-clojure-service]))
+            [rebel-readline.service.local-clojure]))
 
 
 (defmethod ig/init-key :wrepl.rebel-readline/prompt
@@ -13,4 +13,4 @@
   [_ options]
   (rebel-readline.core/clj-repl-read
    (rebel-readline.core/line-reader
-    (rebel-readline.service.impl.local-clojure-service/create options))))
+    (rebel-readline.service.local-clojure/create options))))
