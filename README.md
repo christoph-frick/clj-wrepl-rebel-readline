@@ -7,8 +7,7 @@
 Add in your *wrepl* config (from `rebel-readline` will be passed):
 
 ```clojure
-{:wrepl/prompt #ig/ref :wrepl.rebel-readline/prompt
- :wrepl/read #ig/ref :wrepl.rebel-readline/read
- :wrepl.rebel-readline/prompt {}
- :wrepl.rebel-readline/read {:indent false}}
+{:wrepl/repl #ig/ref :wrepl.rebel-readline/repl 
+ :wrepl.rebel-readline/repl {:key-map :viins
+                             :key-bindings {:viins [["^M" :clojure-force-accept-line]]}}}
 ```
