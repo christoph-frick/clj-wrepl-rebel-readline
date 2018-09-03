@@ -17,3 +17,8 @@
              (into [] cat 
                    (assoc (apply hash-map args)
                           :prompt (fn [])))))))
+
+
+(defmethod ig/init-key :wrepl.rebel-readline/prompt
+  [_ options]
+  rebel-readline.clojure.line-reader/default-prompt-fn)
